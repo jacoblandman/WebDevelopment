@@ -2,106 +2,70 @@
     <head>
         <title>Webpage With Style</title>
         
+<!--        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">-->
+        
         <style type="text/css">
-/*
-        p {
-            color:red;
-            font-size:200%;
-        }
-        h1 {
-            color:pink;
-        }
-*/
-            .red {
-                color:red;
+            #square-red {
+                background-color:red;
+                border: 5px yellow solid;
+            }
+            #square-blue {
+                background-color:blue;
+                border-style: ridge solid dotted dashed;
+                border-color: red pink green yellow;
+                border-width: 10 5 2 1;
+            }
+            #square-green {
+                background-color:green;
+                border-radius:50%;
             }
             
-            .large {
-                font-size:200%
-            }
-            
-            #green {
-                color:forestgreen;
-            }
-            
-            .underlined {
-                text-decoration: underline;
-            }
-            
-/*
-            #first-section {
-                color:#4285F4;
-                background-color: #BCF5A9;
-                width:200px;
-                position:relative;
-                left: 100px;
-                top: 100px;
-                z-index: 1;
+            .square {
+                width: 400px;
+                height: 400px;
+                margin:40px;
                 float:left;
             }
-            #second-section {
-                background-color: lightgrey;
-                width:200px;
-                position:relative;
-                z-index: 2;
-                opacity: 0.5;
-                float:right;
+            
+            .bold {
+/*                font-family: 'Shadows Into Light', cursive;*/
+                font-weight: bold;
+                
+            }
+            .italic {
+/*                font-family: 'Shadows Into Light', cursive;*/
+                font-style: italic;
                 
             }
             
-            
-*/
-            
-            #first-section {
-                color:#4285F4;
-                background-color: #BCF5A9;
-                width:200px;
-                margin-bottom: 50px;
-                margin-left: 150px
-            }
-            #second-section {
-                background-color: lightgrey;
-                width:200px;    
-                margin: 50px 20px;
-                padding: 5px 10px 5px 10px
+            a {
+                text-decoration: none;
             }
             
-            body {
-                margin:0;
-                padding:0;
+            a:hover {
+                text-decoration: underline;
+                color: green;
             }
             
-            p {
-                margin:0;
-                padding:0;
+            .underline {
+                text-decoration: underline;
             }
             
-/*
-            .clear-float {
-                clear:both
+            .big {
+                font-size: 200%;
             }
-*/
             
         </style>
         
     </head>
     <body>
-<!--        <p style="color:blue;font-size:200%">Hi, my name is Jacob.</p>-->
-<!--        <h1 style="color:green;font-size:125%">CSS is cool!</h1>-->
-        
-        <div id="first-section">
-            <p>Hi, my name is Jacob.</p>
-            <p>Wow, I love internal CSS!</p>
-        </div>
-        
-        <div id="second-section">
-            <h1 class="red">CSS is cool!</h1>
-            <p id="green">This is some more text. <span class="underlined">And this text is underlined.</span></p>
-        </div>
-        
-<!--        <div class="clear-float"></div>-->
-        
-        <p>This paragraph is not floated.</p>
-        
+        <p class="bold">This is some bold text!</p>
+        <p class="italic">This is some italic text! <span class="bold">And this is bold and italic</span></p>
+        <p class="underline">This is some underlined text!</p>
+        <a href="">This is a non-underlined link</a>
+        <p class="big">This is some big text</p>
+        <div id="square-red" class="square"></div>
+        <div id="square-blue" class="square"></div>
+        <div id="square-green" class="square"></div>
     </body>
 </html>
