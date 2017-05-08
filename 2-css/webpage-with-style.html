@@ -4,40 +4,7 @@
         
 <!--        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">-->
         
-        <style type="text/css">
-            #square-red {
-                background-color:red;
-                border: 5px yellow solid;
-            }
-            #square-blue {
-                background-color:blue;
-                border-style: ridge solid dotted dashed;
-                border-color: red pink green yellow;
-                border-width: 10 5 2 1;
-            }
-            #square-green {
-                background-color:green;
-                border-radius:50%;
-            }
-            
-            .square {
-                width: 400px;
-                height: 400px;
-                margin:40px;
-                float:left;
-            }
-            
-            .bold {
-/*                font-family: 'Shadows Into Light', cursive;*/
-                font-weight: bold;
-                
-            }
-            .italic {
-/*                font-family: 'Shadows Into Light', cursive;*/
-                font-style: italic;
-                
-            }
-            
+        <style type="text/css">                        
             a {
                 text-decoration: none;
             }
@@ -47,25 +14,26 @@
                 color: green;
             }
             
-            .underline {
-                text-decoration: underline;
+            a:visited {
+                color:purple; 
             }
-            
-            .big {
-                font-size: 200%;
-            }
-            
+                    
         </style>
         
     </head>
-    <body>
-        <p class="bold">This is some bold text!</p>
-        <p class="italic">This is some italic text! <span class="bold">And this is bold and italic</span></p>
-        <p class="underline">This is some underlined text!</p>
-        <a href="">This is a non-underlined link</a>
-        <p class="big">This is some big text</p>
-        <div id="square-red" class="square"></div>
-        <div id="square-blue" class="square"></div>
-        <div id="square-green" class="square"></div>
+    <body>    
+        <div>
+        
+            <p><a href="http://www.google.com">Google</a></p>
+            
+            <p><a href="http://www.google.se" target="_blank">Google in a new tab</a></p>
+        
+        </div>
+        <div>
+            <p><a href="http://www.google.se">Google</a></p>
+            <p><a href="http://www.google.se" target="_blank">Google in a new tab</a></p>
+        </div>
+        
+
     </body>
 </html>
