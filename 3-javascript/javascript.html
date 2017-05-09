@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript</title>
+    </head>
+
+    <body>
+        <p id="text">Hello World!</p>
+        <button id="myButton">Change text</button>
+        <p id="secondParagraph">Javascript is ....</p>
+        <button id="secondButton">Change second Paragraph Text</button>
+        <p id="empty"></p>
+        <button id="thirdButton">Add text</button>
+        <!-- Inline javascript -->
+        <!-- <button onclick="alert('Hello, Jacob!')">Click Me!</button> -->
+        <!-- Scripted javascript -->
+        <script type="text/javascript">
+            // alert('The page is loaded');
+            //document.getElementById("text").innerHTML = "Hello Jacob!";
+            document.getElementById("myButton").onclick = function() {
+                // alert("The button has been clicked!");
+                document.getElementById("text").innerHTML = "Changed!";   
+            }
+            
+            document.getElementById("secondButton").onclick = function() {
+                document.getElementById("secondParagraph").innerHTML = "I think " + document.getElementById("secondParagraph").innerHTML + " awesome!"
+            }
+            
+            document.getElementById("thirdButton").onclick = function() {
+                document.getElementById("empty").innerHTML = "<h1>Created Text!</h1>"
+            } 
+        </script>
+    </body>
+</html>
