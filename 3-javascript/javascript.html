@@ -13,6 +13,9 @@
         <button id="secondButton">Change second Paragraph Text</button>
         <p id="empty"></p>
         <button id="thirdButton">Add text</button>
+        
+        <p id="moreText">This is some text</p>
+        <button id="styleText">Style Text</button>
         <!-- Inline javascript -->
         <!-- <button onclick="alert('Hello, Jacob!')">Click Me!</button> -->
         <!-- Scripted javascript -->
@@ -31,6 +34,12 @@
             document.getElementById("thirdButton").onclick = function() {
                 document.getElementById("empty").innerHTML = "<h1>Created Text!</h1>"
             } 
+            
+            document.getElementById("styleText").onclick = function() {
+                document.getElementById("moreText").style.color = "red";
+                document.getElementById("moreText").style.fontSize = "50px";
+                document.getElementById("moreText").style.display = "none";
+            }
         </script>
     </body>
 </html>
