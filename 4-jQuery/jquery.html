@@ -23,10 +23,6 @@
                 background-color: green;
                 margin: 10px;
             }
-            
-            #hiddenText {
-                display: none;
-            }
 
         </style>
         
@@ -40,56 +36,27 @@
         <div class="square"></div>
         <div class="square"></div>
         
-        <p id="text">A paragraph of some text</p>
-        <p id="hiddenText">This contains hidden text</p>
-        <button id="fadeOut">Click me to fade text out!</button>
-        <button id="fadeIn">Click me to fade text in!</button>
-        <button id="toggle">Click me to toggle text!</button>
-        
         <script type="text/javascript">
             
-            var textShowing = true;
-            
-            $("div").click(function() {
-//                if ($(this).attr("id") == "circle") {
-//                    alert("You clicked on a " + $(this).attr("id"));
-//                } else {
-//                    alert("You clicked on a " + $(this).attr("class"));
-//                }
-                
-                //$(this).css("display", "none");
-                $(this).fadeOut("slow", function() {
-                    alert("The fade is complete")
+            $("#circle").click(function() {
+               
+                $(this).animate({width:"400px",
+                                 height:"400px",
+                                 marginLeft: "100px",
+                                 marginTop: "100px"
+                                }, 2000, function() {
+                    $(this).css("background-color","red");
                 });
                 
-            })
-            
-            $("#fadeOut").click(function() {
-               $("#text").fadeOut() 
             });
             
-            $("#fadeIn").click(function() {
-               $("#hiddenText").fadeIn() 
-            });
+            var regex = /e/g;
             
-            $("#toggle").click(function() {
-               if (textShowing) {
-                   $("#text").fadeOut(function() {
-                       textShowing = false;
-                   });
-               } else {
-                   $("#text").fadeIn(function() {
-                       textShowing = true;
-                   });
-               }
-            });
+            var string = "Regex is great!";
             
-//            $("#circle").click(function() {
-//                //$("#circle").css("width", "400px")
-//                $("#circle").css("background-color", "red")
-//                alert($("#circle").css("background-color"));
-//                alert($("body").css("width"));
-//            });
+            var result = string.match(regex);
+            
+            alert(result);
                                 
         </script>
         
