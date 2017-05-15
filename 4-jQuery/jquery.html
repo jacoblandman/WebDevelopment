@@ -23,6 +23,10 @@
                 background-color: green;
                 margin: 10px;
             }
+            
+            #hiddenText {
+                display: none;
+            }
 
         </style>
         
@@ -32,36 +36,61 @@
 
     <body>
         
-        <div id="circle"></div>
+        <div id="circle"></div>        
         <div class="square"></div>
         <div class="square"></div>
         
-        <iframe src="http://www.cnn.com"></iframe>
-        
-        <p>This is some text.</p>
+        <p id="text">A paragraph of some text</p>
+        <p id="hiddenText">This contains hidden text</p>
+        <button id="fadeOut">Click me to fade text out!</button>
+        <button id="fadeIn">Click me to fade text in!</button>
+        <button id="toggle">Click me to toggle text!</button>
         
         <script type="text/javascript">
-//            $("#circle").click(function() {
-//                alert("Circle was clicked.")
-//            });
-//            $(".square").click(function() {
-//                alert("Square was clicked.")
-//            });
-//            $("div").click(function() {
-//                alert("Div was clicked.")
-//            });
             
-            $("#circle").click(function() {
-               $("p").html("This text has changed.") 
-                $("iframe").attr("src", "http://www.ecowebhosting.co.uk");
+            var textShowing = true;
+            
+            $("div").click(function() {
+//                if ($(this).attr("id") == "circle") {
+//                    alert("You clicked on a " + $(this).attr("id"));
+//                } else {
+//                    alert("You clicked on a " + $(this).attr("class"));
+//                }
+                
+                //$(this).css("display", "none");
+                $(this).fadeOut("slow", function() {
+                    alert("The fade is complete")
+                });
+                
+            })
+            
+            $("#fadeOut").click(function() {
+               $("#text").fadeOut() 
             });
             
-//            $("#circle").hover(function () {
-//                alert($("p").html());
+            $("#fadeIn").click(function() {
+               $("#hiddenText").fadeIn() 
+            });
+            
+            $("#toggle").click(function() {
+               if (textShowing) {
+                   $("#text").fadeOut(function() {
+                       textShowing = false;
+                   });
+               } else {
+                   $("#text").fadeIn(function() {
+                       textShowing = true;
+                   });
+               }
+            });
+            
+//            $("#circle").click(function() {
+//                //$("#circle").css("width", "400px")
+//                $("#circle").css("background-color", "red")
+//                alert($("#circle").css("background-color"));
+//                alert($("body").css("width"));
 //            });
-            
-            
-            
+                                
         </script>
         
     </body>
